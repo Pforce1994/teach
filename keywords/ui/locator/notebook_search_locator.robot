@@ -19,4 +19,7 @@
 ...    target_click_page=//div[@class="pl-3 pr-3 pb-4 pt-4 mb-2 bg-white d-none d-lg-block"]
         #ตำแหน่งชื่อของ note book แต่ละรุ่น
 ...    get_name_notebook=//ul[@class="search-item-list"]/li
-...    tail_section=/div[@class="item-detail"]/div[@class="item-info"]/a
+...    tail_name=/div[@class="item-detail"]/div[@class="item-info"]/a
+...    tail_data=/div[@class="item-detail"]/div/ul[@class="info-list"]/li
+...    get_data_notebook=//ul[@class="search-item-list"]/li[1]/div[@class="item-detail"]/div/ul[@class="info-list"]/li
+...    on_data_notebook=//div[@class="item-info"]

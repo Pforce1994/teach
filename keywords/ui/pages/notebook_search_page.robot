@@ -112,13 +112,18 @@ Search notebook and count data
         ${name_txt}    SeleniumLibrary.Get Text    ${notebook_search_locator['name_notebook']}
         ${name_txt}    String.Convert To Lower Case    ${name_txt}
         ${status}    BuiltIn.Run Keyword And Return Status    SeleniumLibrary.Wait Until Element Contains    ${notebook_search_locator['name_notebook']}     ${txt}   timeout=${10s_timeout}
+        ${round}    BuiltIn.Evaluate    ${round}+1
+        IF  ${round} == ${3}
+            ${status}  BuiltIn.Set Variable    ${True}
+            Log    ${False}
+        END
     END
     # ${status}    BuiltIn.Run Keyword And Return Status    SeleniumLibrary.Wait Until Element Contains    ${notebook_search_locator['name_notebook']}    MacBook  #${txt.capitalize()}  timeout=${10s_timeout}
     # BuiltIn.Run Keyword And Return If  ${status} == ${False}    SeleniumLibrary.Wait Until Element Contains    ${notebook_search_locator['name_notebook']}    MacBook  #${txt}  timeout=${10s_timeout}
     ${text_result}    SeleniumLibrary.Get Text    ${notebook_search_locator['result_total']}
     ${total_page}    SeleniumLibrary.Get Element Count    ${notebook_search_locator['page_total']}
     ${rusult_total_notebook}    BuiltIn.Set Variable    ${0}
-    @{list_name}    BuiltIn.Create List
+    @{list}   BuiltIn.Create List
     FOR  ${index_page}  IN RANGE  2   ${total_page}
         SeleniumLibrary.Wait Until Element Is Visible     ${notebook_search_locator['count_notebook']}    timeout=${10s_timeout}
         SeleniumLibrary.Scroll Element Into View    ${notebook_search_locator['target_click_page']}
@@ -129,16 +134,29 @@ Search notebook and count data
         ${rusult_notebook}    SeleniumLibrary.Get Element Count    ${notebook_search_locator['count_notebook']}
         ${rusult_total_notebook}    BuiltIn.Evaluate    ${rusult_total_notebook}+${rusult_notebook}
         FOR  ${index_name}  IN RANGE  1    ${rusult_notebook}+1
+            @{sub}    BuiltIn.Create List
             SeleniumLibrary.Wait Until Element Is Visible        ${notebook_search_locator['get_name_notebook']}    timeout=${10s_timeout}
             ${locator_name}    BuiltIn.Catenate    SEPARATOR=        (${notebook_search_locator['get_name_notebook']})[${index_name}]
-            ...    ${notebook_search_locator['tail_section']}
+            ...    ${notebook_search_locator['tail_name']}
             ${name_notebook}    SeleniumLibrary.Get Text    ${locator_name}
-            Collections.Append To List    ${list_name}    ${name_notebook}            
+            Collections.Append To List    ${sub}    ${name_notebook}       
+            IF  ${index_page} == ${2}
+                ${locator_data}    BuiltIn.Set Variable    (${notebook_search_locator['get_name_notebook']})[${index_name}]${notebook_search_locator['tail_data']}
+                ${total_data}    SeleniumLibrary.Get Element Count    ${locator_data}
+            FOR  ${index_data}  IN RANGE  1    ${total_data}+1
+                ${locator_data}    BuiltIn.Set Variable    (${notebook_search_locator['get_name_notebook']})[${index_name}]${notebook_search_locator['tail_data']}
+                ${locator_data}    BuiltIn.Catenate    SEPARATOR=    (${locator_data})[${index_data}]
+                ${name_data}    SeleniumLibrary.Get Text       ${locator_data}
+                Collections.Append To List    ${sub}    ${name_data}
+            END
+            Collections.Append To List   ${list}    ${sub} 
+            END
         END
     END
+    Log To Console    ${list}
     ${get_total_show}    String.Split String    ${text_result} 
     ${get_total}    BuiltIn.Convert To Integer    ${get_total_show}[1]
-    [Return]    ${get_total}    ${rusult_total_notebook}    ${list_name} 
+    [Return]    ${get_total}    ${rusult_total_notebook}    ${list} 
         
     
     

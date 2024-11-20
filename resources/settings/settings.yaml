@@ -12,5 +12,8 @@ max_timeout:    300s
 #retry
 retry:  3
 
+#round
+round : 0
+
 
 url:  https://notebookspec.com/
