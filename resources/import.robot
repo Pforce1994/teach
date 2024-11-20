@@ -1,19 +1,16 @@
 *** Settings ***
 #Library
 Library        SeleniumLibrary
-Library        ExcelLibrary
-Library        DatabaseLibrary
+# Library        ExcelLibrary
+# Library        DatabaseLibrary
 Library        OperatingSystem
-Library        Pdf2TextLibrary
 Library        Collections
 Library        DateTime
 Library        String
-Library        ImapLibrary2
-Library        BrowserMobProxyLibrary
-Library        JSONLibrary
-Library        DebugLibrary
+# Library        JSONLibrary
+# Library        DebugLibrary
 Library        RequestsLibrary
-Library        REST
+# Library        REST
 
 #common
 Resource    ${CURDIR}/../keywords/common/common_web.robot

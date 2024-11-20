@@ -2,9 +2,11 @@
 max_timeout:    300s
 60s_timeout:    60s
 30s_timeout:    30s
+20s_timeout:    20s
 10s_timeout:    10s
 5s_timeout:     5s
 3s_timeout:     3s
+2s_timeout :    2s
 1s_timeout:     1s
 
 #retry

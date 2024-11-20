@@ -1,0 +1,2 @@
+*** Variables ***
+&{common_locator}

@@ -12,7 +12,6 @@ Go to web notebookspec
     SeleniumLibrary.Maximize Browser Window
     SeleniumLibrary.Wait Until Element Is Visible    ${main_locator['btn_search_notebook']}    timeout=${30s_timeout}
 
-
 Open chrome browser
     [Documentation]         Open chrome browser with so many option to customize.
                     ...     \n ``browser_mode`` can be either desktop or mobile to open in mobile resolution
