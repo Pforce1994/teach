@@ -1,13 +1,13 @@
 *** Settings ***
 #Library
 Library        SeleniumLibrary
-# Library        ExcelLibrary
-# Library        DatabaseLibrary
+Library        ExcelLibrary
+Library        DatabaseLibrary
 Library        OperatingSystem
 Library        Collections
 Library        DateTime
 Library        String
-# Library        JSONLibrary
+Library        JSONLibrary
 # Library        DebugLibrary
 Library        RequestsLibrary
 # Library        REST
@@ -37,3 +37,12 @@ Resource    ${CURDIR}/../keywords/ui/locator/notebook_search_locator.robot
 #pages
 Resource    ${CURDIR}/../keywords/ui/pages/main_page.robot
 Resource    ${CURDIR}/../keywords/ui/pages/notebook_search_page.robot
+
+#excel
+Resource    ${CURDIR}/../keywords/excel/excel_test.robot
+
+#api
+Resource    ${CURDIR}/../keywords/api/get_request.robot
+Resource    ${CURDIR}/../keywords/api/post_request.robot
+Resource    ${CURDIR}/../keywords/api/put_request.robot
+Resource    ${CURDIR}/../keywords/api/delet_request.robot

@@ -23,8 +23,8 @@ tc_01
     # ${text}    BuiltIn.Set Variable    “อุปกรณ์ IoT” "ภัยเงียบที่เสี่ยงคุกคามบ้านคุณ ?
     # ${text}    String.Remove String    ${text}    "  “  ”  ${SPACE}
     # Log To Console    ${text}
-    @{list}    BuiltIn.Create List    a  b  c  d
-    @{list_g}    BuiltIn.Create List    a  b  r
+    # @{list}    BuiltIn.Create List    a  b  c  d
+    # @{list_g}    BuiltIn.Create List    a  b  r
     # FOR  ${item}  IN  @{list_g}
     #     ${in_list1}     BuiltIn.Run Keyword And Return Status  BuiltIn.Should Contain   ${list}  ${item}
     #     Log To Console    ${in_list1}
@@ -44,6 +44,16 @@ tc_01
     #     END
     # END
     # Log To Console     The different items are: ${list_g}
-    ${lol}    BuiltIn.Get Length    ${list}
-    ${lo}    BuiltIn.Get Length    ${list_g}
-    Log To Console    list:${lol} list_g:${lo}
+    # ${lol}    BuiltIn.Get Length    ${list}
+    # ${lo}    BuiltIn.Get Length    ${list_g}
+    # Log To Console    list:${lol} list_g:${lo}
+
+    &{menu}    BuiltIn.Create Dictionary    
+    Collections.Set To Dictionary    ${menu}    m1  got   
+    &{m1_lv2}    BuiltIn.Create Dictionary
+    Collections.Set To Dictionary    ${m1_lv2}    n1  zilla    n2  555   
+    Collections.Set To Dictionary    ${menu}     m1_lv2    ${m1_lv2}
+    Log To Console   ${menu}
+    Log To Console    ${menu['m1']}
+    Log To Console    ${menu['m1_lv2']}
+    Log To Console    ${menu['m1_lv2']['n1']}

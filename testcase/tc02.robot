@@ -1,7 +1,7 @@
 *** Settings ***
 Resource    ${CURDIR}/../resources/import.robot
 *** Test Cases ***
-tc_02
+Tc_02
     [Tags]    tc_02    search_and_get_name_notebook
     [Setup]    common_web.Go to web notebookspec
     main_page.Click btn search notebook

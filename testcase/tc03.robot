@@ -1,7 +1,7 @@
 *** Settings ***
 Resource    ${CURDIR}/../resources/import.robot
 *** Test Cases ***
-tc_03    
+Tc_03    
     [Tags]    tc_03    sub_list
     [Setup]    common_web.Go to web notebookspec
     main_page.Click btn search notebook
