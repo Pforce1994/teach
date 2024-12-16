@@ -1,0 +1,32 @@
+1733841169810	geckodriver	INFO	Listening on 127.0.0.1:49234
+1733841169893	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/Use ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/z8/hw3p2fr57hbgxldmnkzl9bzw0000gn/T/rust_mozprofileCKQsdb"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1733841172455	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1733841172646	Marionette	INFO	Listening on port 49254
+WebDriver BiDi listening on ws://127.0.0.1:49235
+Read port: 49254
+1733841172701	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+2024-12-10 21:32:53.250 firefox[1330:20111] +[IMKClient subclass]: chose IMKClient_Modern
+2024-12-10 21:32:53.250 firefox[1330:20111] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+DevTools listening on ws://127.0.0.1:49235/devtools/browser/71af70d7-2c2a-40dd-a78b-1c9ce55fc5d6
+JavaScript error: https://notebookspec.com/web/wp-content/plugins/designil-pdpa/public/assets/js/designil-pdpa-public.min.js?ver=2.1.6, line 1: TypeError: pdpa_settings_close is null
+JavaScript error: https://notebookspec.com/web/wp-content/plugins/designil-pdpa/public/assets/js/designil-pdpa-public.min.js?ver=2.1.6, line 1: TypeError: pdpa_settings_close is null
+JavaScript warning: https://pagead2.googlesyndication.com/bg/9YadZKAvDfVs1YHnOGS_YpAGPxas43qCCMtu3GVxRaw.js line 2 > eval line 242 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource:///modules/sessionstore/SessionStore.sys.mjs, line 3624: TypeError: this._windows[aWindow.__SSi] is undefined
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-MJW4YKCBT9&l=dataLayer&cx=c&gtm=45He4c90v833268391za200, line 729: Script terminated by timeout at:
+get@https://www.googletagmanager.com/gtag/js?id=G-MJW4YKCBT9&l=dataLayer&cx=c&gtm=45He4c90v833268391za200:729:115
+stop@https://www.googletagmanager.com/gtag/js?id=G-MJW4YKCBT9&l=dataLayer&cx=c&gtm=45He4c90v833268391za200:729:87
+h.yl/c/<@https://www.googletagmanager.com/gtag/js?id=G-MJW4YKCBT9&l=dataLayer&cx=c&gtm=45He4c90v833268391za200:729:410
+
+JavaScript warning: https://gum.criteo.com/syncframe?origin=publishertagids&topUrl=notebookspec.com#{%22lwid%22:{%22origin%22:0},%22bundle%22:{%22origin%22:0},%22optout%22:{%22value%22:false,%22origin%22:0},%22tld%22:%22notebookspec.com%22,%22topUrl%22:%22notebookspec.com%22,%22version%22:159,%22cw%22:true,%22lsw%22:true,%22origin%22:%22publishertagids%22,%22requestId%22:%220.6543279754237737%22}, line 13: Script terminated by timeout at:
+r.prototype.flushEventQueue@https://gum.criteo.com/syncframe?origin=publishertagids&topUrl=notebookspec.com#{%22lwid%22:{%22origin%22:0},%22bundle%22:{%22origin%22:0},%22optout%22:{%22value%22:false,%22origin%22:0},%22tld%22:%22notebookspec.com%22,%22topUrl%22:%22notebookspec.com%22,%22version%22:159,%22cw%22:true,%22lsw%22:true,%22origin%22:%22publishertagids%22,%22requestId%22:%220.6543279754237737%22}:13:3137
+r/<@https://gum.criteo.com/syncframe?origin=publishertagids&topUrl=notebookspec.com#{%22lwid%22:{%22origin%22:0},%22bundle%22:{%22origin%22:0},%22optout%22:{%22value%22:false,%22origin%22:0},%22tld%22:%22notebookspec.com%22,%22topUrl%22:%22notebookspec.com%22,%22version%22:159,%22cw%22:true,%22lsw%22:true,%22origin%22:%22publishertagids%22,%22requestId%22:%220.6543279754237737%22}:13:3642
+
+1733841181176	Marionette	INFO	Stopped listening on port 49254
+console.error: "Failed to fetch https://spocs.getpocket.com/user:" "NetworkError when attempting to fetch resource."
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.error: ({})
+console.error: ({})

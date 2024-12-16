@@ -8,9 +8,7 @@ Library        Collections
 Library        DateTime
 Library        String
 Library        JSONLibrary
-# Library        DebugLibrary
 Library        RequestsLibrary
-# Library        REST
 
 #common
 Resource    ${CURDIR}/../keywords/common/common_web.robot
@@ -42,7 +40,10 @@ Resource    ${CURDIR}/../keywords/ui/pages/notebook_search_page.robot
 Resource    ${CURDIR}/../keywords/excel/excel_test.robot
 
 #api
-Resource    ${CURDIR}/../keywords/api/get_request.robot
-Resource    ${CURDIR}/../keywords/api/post_request.robot
-Resource    ${CURDIR}/../keywords/api/put_request.robot
-Resource    ${CURDIR}/../keywords/api/delet_request.robot
+# Resource    ${CURDIR}/../keywords/api/get_request.robot
+# Resource    ${CURDIR}/../keywords/api/post_request.robot
+# Resource    ${CURDIR}/../keywords/api/put_request.robot
+# Resource    ${CURDIR}/../keywords/api/delet_request.robot
+
+
+

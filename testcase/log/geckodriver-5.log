@@ -1,0 +1,80 @@
+1733918617714	geckodriver	INFO	Listening on 127.0.0.1:50565
+1733918617727	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/Use ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/z8/hw3p2fr57hbgxldmnkzl9bzw0000gn/T/rust_mozprofilegN277Z"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1733918618107	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1733918618291	Marionette	INFO	Listening on port 50571
+WebDriver BiDi listening on ws://127.0.0.1:50566
+Read port: 50571
+1733918618407	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+2024-12-11 19:03:38.720 firefox[9359:901021] +[IMKClient subclass]: chose IMKClient_Modern
+2024-12-11 19:03:38.720 firefox[9359:901021] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+DevTools listening on ws://127.0.0.1:50566/devtools/browser/a1589413-eb76-4b5c-8c7b-0e55aa8de6fe
+JavaScript error: https://notebookspec.com/web/wp-content/plugins/designil-pdpa/public/assets/js/designil-pdpa-public.min.js?ver=2.1.6, line 1: TypeError: pdpa_settings_close is null
+JavaScript error: https://notebookspec.com/web/wp-content/plugins/designil-pdpa/public/assets/js/designil-pdpa-public.min.js?ver=2.1.6, line 1: TypeError: pdpa_settings_close is null
+JavaScript warning: https://pagead2.googlesyndication.com/bg/9YadZKAvDfVs1YHnOGS_YpAGPxas43qCCMtu3GVxRaw.js line 2 > eval line 2966 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/9YadZKAvDfVs1YHnOGS_YpAGPxas43qCCMtu3GVxRaw.js line 2 > eval line 3846 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource:///modules/sessionstore/SessionStore.sys.mjs, line 3624: TypeError: this._windows[aWindow.__SSi] is undefined
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-MJW4YKCBT9&l=dataLayer&cx=c&gtm=45He4ca0v833268391za200, line 728: Script terminated by timeout at:
+get@https://www.googletagmanager.com/gtag/js?id=G-MJW4YKCBT9&l=dataLayer&cx=c&gtm=45He4ca0v833268391za200:728:115
+stop@https://www.googletagmanager.com/gtag/js?id=G-MJW4YKCBT9&l=dataLayer&cx=c&gtm=45He4ca0v833268391za200:728:87
+h.yl/c/<@https://www.googletagmanager.com/gtag/js?id=G-MJW4YKCBT9&l=dataLayer&cx=c&gtm=45He4ca0v833268391za200:728:410
+
+JavaScript warning: https://gum.criteo.com/syncframe?origin=publishertagids&topUrl=notebookspec.com#{%22lwid%22:{%22origin%22:0},%22bundle%22:{%22origin%22:0},%22optout%22:{%22value%22:false,%22origin%22:0},%22tld%22:%22notebookspec.com%22,%22topUrl%22:%22notebookspec.com%22,%22version%22:159,%22cw%22:true,%22lsw%22:true,%22origin%22:%22publishertagids%22,%22requestId%22:%220.2169569082378061%22}, line 13: Script terminated by timeout at:
+r.prototype.flushEventQueue@https://gum.criteo.com/syncframe?origin=publishertagids&topUrl=notebookspec.com#{%22lwid%22:{%22origin%22:0},%22bundle%22:{%22origin%22:0},%22optout%22:{%22value%22:false,%22origin%22:0},%22tld%22:%22notebookspec.com%22,%22topUrl%22:%22notebookspec.com%22,%22version%22:159,%22cw%22:true,%22lsw%22:true,%22origin%22:%22publishertagids%22,%22requestId%22:%220.2169569082378061%22}:13:3137
+r/<@https://gum.criteo.com/syncframe?origin=publishertagids&topUrl=notebookspec.com#{%22lwid%22:{%22origin%22:0},%22bundle%22:{%22origin%22:0},%22optout%22:{%22value%22:false,%22origin%22:0},%22tld%22:%22notebookspec.com%22,%22topUrl%22:%22notebookspec.com%22,%22version%22:159,%22cw%22:true,%22lsw%22:true,%22origin%22:%22publishertagids%22,%22requestId%22:%220.2169569082378061%22}:13:3642
+
+JavaScript warning: https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js, line 83: Script terminated by timeout at:
+n.next@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:83:802
+dd.prototype.next@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:89:1293
+vc.prototype.next@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:218
+n.Fd@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:80:756
+n.next@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:80:523
+jh/c/</</<@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:131:320
+Xa@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:49:339
+Ua.prototype.flush@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:49:127
+Wa@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:48:483
+jh/c/</<@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:131:292
+vc.prototype.next@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:218
+n.Fd@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:80:756
+n.next@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:80:523
+rg/</</</<@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:121:515
+Sa.prototype.Ub/<@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:48:315
+rg/</</<@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:121:524
+vc.prototype.next@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:218
+n.Fd@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:80:756
+n.next@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:80:523
+rg/</</</<@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:121:515
+Sa.prototype.Ub/<@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:48:315
+rg/</</<@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:121:524
+vc.prototype.next@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:81:218
+n.Fd@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:80:756
+n.next@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:80:523
+h@https://pagead2.googlesyndication.com/pagead/managed/js/activeview/current/ufs_web_display.js:93:477
+
+1733918648984	Marionette	INFO	Stopped listening on port 50571
+console.error: "Failed to fetch https://spocs.getpocket.com/user:" "NetworkError when attempting to fetch resource."
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.error: ({})
+console.error: ({})
+console.error: services.settings: 
+Object
+  - prototype Object
+    - columnNumber = 0
+    - data = null
+    - filename = resource://gre/modules/ServiceRequest.sys.mjs
+    - lineNumber = 127
+    - location = {"name":"open","filename":"resource://gre/modules/ServiceRequest.sys.mjs","sourceId":24,"lineNumber":127,"columnNumber":11,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetch/<","sourceId":23,"lineNumber":268,"columnNumber":15,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetch","sourceId":23,"lineNumber":219,"columnNumber":12,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/RemoteSettingsClient.sys.mjs","name":"_validateCollectionSignature","sourceId":21,"lineNumber":1012,"columnNumber":47,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/RemoteSettingsClient.sys.mjs","name":"maybeSync","sourceId":21,"lineNumber":729,"columnNumber":26,"asyncCause":null,"asyncCaller":null,"caller":null,"formattedStack":"maybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:729:26\n","nativeSavedFrame":{}},"formattedStack":"_validateCollectionSignature@resource://services-settings/RemoteSettingsClient.sys.mjs:1012:47\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:729:26\n","nativeSavedFrame":{}},"formattedStack":"fetch@resource://services-settings/Utils.sys.mjs:219:12\n_validateCollectionSignature@resource://services-settings/RemoteSettingsClient.sys.mjs:1012:47\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:729:26\n","nativeSavedFrame":{}},"formattedStack":"fetch/<@resource://services-settings/Utils.sys.mjs:268:15\nfetch@resource://services-settings/Utils.sys.mjs:219:12\n_validateCollectionSignature@resource://services-settings/RemoteSettingsClient.sys.mjs:1012:47\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:729:26\n","nativeSavedFrame":{}},"formattedStack":"open@resource://gre/modules/ServiceRequest.sys.mjs:127:11\nfetch/<@resource://services-settings/Utils.sys.mjs:268:15\nfetch@resource://services-settings/Utils.sys.mjs:219:12\n_validateCollectionSignature@resource://services-settings/RemoteSettingsClient.sys.mjs:1012:47\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:729:26\n","nativeSavedFrame":{}}
+    - message = 
+    - name = 
+    - result = 2152071198
+    - stack = open@resource://gre/modules/ServiceRequest.sys.mjs:127:11|fetch/<@resource://services-settings/Utils.sys.mjs:268:15|fetch@resource://services-settings/Utils.sys.mjs:219:12|_validateCollectionSignature@resource://services-settings/RemoteSettingsClient.sys.mjs:1012:47|maybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:729:26|
+  - prototype Object
+console.warn: services.settings: main/newtab-wallpapers-v2 sync interrupted by shutdown
+console.warn: services.settings: main/websites-with-shared-credential-backends sync interrupted by shutdown
+console.warn: services.settings: main/search-telemetry-v2 sync interrupted by shutdown
+console.warn: services.settings: main/password-rules sync interrupted by shutdown
+console.warn: services.settings: main/translations-wasm sync interrupted by shutdown
+console.error: ({details:{id:"8b878038-f209-6179-d981-2ebf0a5c0214", last_modified:1726769128879, bucket:"main", collection:"url-parser-default-unknown-schemes-interventions", host:"firefox.settings.services.mozilla.com"}})

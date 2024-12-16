@@ -16,5 +16,8 @@ retry:  3
 round : 0
 
 
-url:  https://notebookspec.com/
-test_excel: D:\สอน\resources\excel_data\test_excel.xlsx
+url :  https://notebookspec.com/
+
+collection_file : /Users/pichaya/project_code/teach/resources/postman/collection.json
+env_file : /Users/pichaya/project_code/teach/resources/postman/environment.json
+test_excel : /Users/pichaya/teach/resources/excel_data/test_excel.xlsx

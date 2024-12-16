@@ -9,11 +9,18 @@ Verify head menu
     &{get_menu}    BuiltIn.Create Dictionary    
         FOR  ${index_menu_lv1}  IN RANGE  1    ${menu_total_lv1}+1
             ${menu_lv1}    BuiltIn.Catenate    SEPARATOR=    (${notebook_search_locator['menu_level_1']})[${index_menu_lv1}]
-            ${menu_name_lv1}    SeleniumLibrary.Get Text    ${menu_lv1}   
-            # Collections.Append To List  ${list}    ${menu_name_lv1}  
+            ${menu_name_lv1}    SeleniumLibrary.Get Text    ${menu_lv1}    
             Collections.Set To Dictionary    ${get_menu}    m${index_menu_lv1}    ${menu_name_lv1}        
-            SeleniumLibrary.Mouse Over    ${menu_lv1}
-            SeleniumLibrary.Wait Until Element Is Visible    ${menu_lv1}    timeout=${10s_timeout}
+            SeleniumLibrary.Mouse Over    ${menu_lv1}    
+            ${status}    BuiltIn.Run Keyword And Return Status        SeleniumLibrary.Wait Until Element Is Visible    ${menu_lv1}    timeout=${10s_timeout}
+                IF  ${status} == ${False}
+                        FOR  ${index_retry}  IN RANGE  1    ${retry}+${1}
+                            SeleniumLibrary.Mouse Over    ${menu_lv1}
+                            ${status}    BuiltIn.Run Keyword And Return Status    SeleniumLibrary.Wait Until Element Is Visible    ${menu_lv1}    timeout=${20s_timeout}
+                            Exit For Loop If    ${status}   
+                        END    
+                    END
+            # SeleniumLibrary.Wait Until Element Is Visible    ${menu_lv1}    timeout=${10s_timeout}
             IF  ${index_menu_lv1} <= ${4}
                 ${menu_lv1}    BuiltIn.Catenate    SEPARATOR=       (${menu_lv1})/ul/li
             ELSE IF    ${index_menu_lv1} == ${5}
@@ -28,10 +35,16 @@ Verify head menu
                 IF  ${index_menu_lv1} <= ${4}
                 ${menu_lv2}    BuiltIn.Catenate    SEPARATOR=        (${menu_lv1})[${index_menu_lv2}]
                 SeleniumLibrary.Mouse Over    ${menu_lv2}
-                SeleniumLibrary.Wait Until Element Is Visible    ${menu_lv2}    timeout=${20s_timeout} 
-                ${menu_lv2}    BuiltIn.Catenate    SEPARATOR=    (${menu_lv2})/a
+                ${status}    BuiltIn.Run Keyword And Return Status        SeleniumLibrary.Wait Until Element Is Visible    ${menu_lv2}    timeout=${20s_timeout} 
+                IF  ${status} == ${False}
+                        FOR  ${index_retry}  IN RANGE  1    ${retry}+${1}
+                            SeleniumLibrary.Mouse Over    ${menu_lv2}
+                            ${status}    BuiltIn.Run Keyword And Return Status    SeleniumLibrary.Wait Until Element Is Visible    ${menu_lv2}    timeout=${20s_timeout}
+                            Exit For Loop If    ${status}   
+                        END    
+                    END   
+                # ${menu_lv2}    BuiltIn.Catenate    SEPARATOR=    (${menu_lv2})/a
                 ${menu_name_lv2}    SeleniumLibrary.Get Text    ${menu_lv2}
-                # Collections.Append To List  ${list}    ${menu_name_lv2}
                 Collections.Set To Dictionary    ${m_lv2}    n${index_menu_lv2}  ${menu_name_lv2}  
                 Collections.Set To Dictionary    ${get_menu}    m${index_menu_lv1}_lv2  ${m_lv2}  
                 ${menu_lv2}    BuiltIn.Set Variable    (${menu_lv1})[${index_menu_lv2}]
@@ -40,10 +53,19 @@ Verify head menu
                 &{n_lv3}    BuiltIn.Create Dictionary   
                 FOR  ${index_menu_lv3}  IN RANGE  1    ${total_menu_lv3}+1
                     ${menu_lv3}    BuiltIn.Catenate    SEPARATOR=        (${menu_lv2})[${index_menu_lv3}]
+                    SeleniumLibrary.Scroll Element Into View    ${menu_lv3}
                     SeleniumLibrary.Mouse Over    ${menu_lv3}
-                    SeleniumLibrary.Wait Until Element Is Visible    ${menu_lv3}    timeout=${20s_timeout}
+                    ${status}    BuiltIn.Run Keyword And Return Status    SeleniumLibrary.Wait Until Element Is Visible    ${menu_lv3}    timeout=${20s_timeout}
+                    IF  ${status} == ${False}
+                        FOR  ${index_retry}  IN RANGE  1    ${retry}+${1}
+                            # SeleniumLibrary.Mouse Over    ${menu_lv1}
+                            # SeleniumLibrary.Mouse Over    ${menu_lv2}
+                            SeleniumLibrary.Mouse Over    ${menu_lv3}
+                            ${status}    BuiltIn.Run Keyword And Return Status    SeleniumLibrary.Wait Until Element Is Visible    ${menu_lv3}    timeout=${20s_timeout}
+                            Exit For Loop If    ${status}   
+                        END    
+                    END                                        
                     ${menu_name_lv3}    SeleniumLibrary.Get Text    ${menu_lv3}
-                    # Collections.Append To List  ${list}    ${menu_name_lv3}
                     Collections.Set To Dictionary    ${n_lv3}    p${index_menu_lv3}  ${menu_name_lv3}
                     Collections.Set To Dictionary    ${m_lv2}    n${index_menu_lv2}_lv3  ${n_lv3}
                 END
@@ -55,65 +77,16 @@ Verify head menu
                     ${menu_lv2}    BuiltIn.Set Variable    (${menu_lv1})[${index_menu_lv2}]/a/p
                     ${menu_name_lv2}    SeleniumLibrary.Get Text    ${menu_lv2}
                     ${menu_name_lv2}    String.Remove String    ${menu_name_lv2}    "  “  ”  ${SPACE}
-                    # Collections.Append To List  ${list}    ${menu_name_lv2_img}
-                    # Collections.Append To List  ${list}    ${menu_name_lv2} 
                     Collections.Set To Dictionary    ${m_lv2}   n${index_menu_lv2}  ${menu_name_lv2_img}   n${index_menu_lv2}_2  ${menu_name_lv2}
                     Collections.Set To Dictionary    ${get_menu}    m${index_menu_lv1}_lv2  ${m_lv2}
                 END
                 IF    ${index_menu_lv1} == ${6}
-                    # Collections.Append To List  ${list}    ${menu_name_link}
                     Collections.Set To Dictionary    ${m_lv2}    n1  ${menu_name_link}
                     Collections.Set To Dictionary  ${get_menu}    m${index_menu_lv1}_lv2    ${m_lv2}
                 END
             END
         END 
-        # Log To Console    ${get_menu}
         RETURN    ${get_menu}
-
-# Get menu name   
-#     @{list_get}    BuiltIn.Create List
-#     ${total_menu}    SeleniumLibrary.Get Element Count    ${notebook_search_locator['menu_level_1']}
-#     FOR  ${index_menu}  IN RANGE  1  ${total_menu}+1
-#         IF  ${index_menu} <= ${4}
-#             # Log To Console    ${menu['m${index_menu}']}
-#             # Collections.Append To List    ${list_get}    ${menu['m${index_menu}']}
-#             ${menu_lv1}    BuiltIn.Catenate    SEPARATOR=    (${notebook_search_locator['menu_level_1']})[${index_menu}]/ul/li
-#             ${total_m1_lv2}    SeleniumLibrary.Get Element Count    ${menu_lv1}
-#             FOR  ${index_m1_lv2}  IN RANGE  1  ${total_m1_lv2}+1
-#                 ${menu_lv2}    BuiltIn.Catenate    SEPARATOR=    (${menu_lv1})[${index_m1_lv2}]
-#                 # Log To Console    ${menu['m${index_menu}_lv2']['n${index_m1_lv2}']}
-#                 # Collections.Append To List    ${list_get}    ${menu['m${index_menu}_lv2']['n${index_m1_lv2}']}
-#                 ${menu_lv2}    BuiltIn.Catenate    SEPARATOR=    (${menu_lv2})/ul/li
-#                 ${total_menu_lv3}    SeleniumLibrary.Get Element Count    ${menu_lv2}
-#                 FOR  ${index_n1_lv3}  IN RANGE  1    ${total_menu_lv3}+1  
-#                     # Log To Console    ${menu['m${index_menu}_lv2']['n${index_m1_lv2}_lv3']['p${index_n1_lv3}']}
-#                     Collections.Append To List    ${list_get}    ${menu['m${index_menu}_lv2']['n${index_m1_lv2}_lv3']['p${index_n1_lv3}']}
-#                 END
-#             END
-#         ELSE IF  ${index_menu} == ${5}
-#             # Log To Console    ${menu['m${index_menu}']}
-#             Collections.Append To List    ${list_get}    ${menu['m${index_menu}']}
-#             ${menu_lv1}    BuiltIn.Catenate    SEPARATOR=    (${notebook_search_locator['menu_level_1']})[${index_menu}]/div/ul/li
-#             ${total_m1_lv2}    SeleniumLibrary.Get Element Count    ${menu_lv1}
-#             ${total_m1_lv2}    BuiltIn.Evaluate    ${total_m1_lv2}*${2}
-#             FOR  ${index_m1_lv2}  IN RANGE  1  ${total_m1_lv2}+1
-#                 ${menu_lv2}    BuiltIn.Catenate    SEPARATOR=    (${menu_lv1})[${index_m1_lv2}]
-#                 # Log To Console    ${menu['m${index_menu}_lv2']['n${index_m1_lv2}']}
-#                 Collections.Append To List    ${list_get}    ${menu['m${index_menu}_lv2']['n${index_m1_lv2}']}
-#             END
-#         ELSE IF    ${index_menu} == ${6}
-#             # Log To Console    ${menu['m${index_menu}']}
-#             Collections.Append To List    ${list_get}    ${menu['m${index_menu}']}
-#             ${menu_lv1}    BuiltIn.Catenate    SEPARATOR=    (${notebook_search_locator['menu_level_1']})[${index_menu}]/a
-#             ${total_m1_lv2}    SeleniumLibrary.Get Element Count    ${menu_lv1}
-#             FOR  ${index_m1_lv2}  IN RANGE  1  ${total_m1_lv2}+1
-#                 ${menu_lv2}    BuiltIn.Catenate    SEPARATOR=    (${menu_lv1})[${index_m1_lv2}]
-#                 # Log To Console    ${menu['m${index_menu}_lv2']['n${index_m1_lv2}']}
-#                 Collections.Append To List    ${list_get}    ${menu['m${index_menu}_lv2']['n${index_m1_lv2}']}
-#             END
-#         END
-#     END
-#     RETURN   ${list_get}
 
 Search notebook and count data
     [Arguments]    ${txt}

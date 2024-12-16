@@ -57,3 +57,9 @@ tc_01
     Log To Console    ${menu['m1']}
     Log To Console    ${menu['m1_lv2']}
     Log To Console    ${menu['m1_lv2']['n1']}
+
+    # FOR  ${index}  IN RANGE  1  6
+    #     Open Browser     https://www.google.com/     browser=chrome
+    #     SeleniumLibrary.Maximize Browser Window
+    # END
+

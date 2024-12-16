@@ -23,3 +23,4 @@
 ...    tail_data=/div[@class="item-detail"]/div/ul[@class="info-list"]/li
 ...    get_data_notebook=//ul[@class="search-item-list"]/li[1]/div[@class="item-detail"]/div/ul[@class="info-list"]/li
 ...    on_data_notebook=//div[@class="item-info"]
+...    click_button=//button[@class="ats-overlay-bottom-close-button"]
