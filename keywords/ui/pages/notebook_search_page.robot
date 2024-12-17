@@ -3,7 +3,13 @@ Resource    ${CURDIR}/../../../resources/import.robot
 *** Keywords ***
 
 Verify head menu
-    SeleniumLibrary.Wait Until Element Is Visible    ${notebook_search_locator['menu_level_1']}    timeout=${10s_timeout}
+    ${status}    BuiltIn.Run Keyword And Return Status    SeleniumLibrary.Wait Until Element Is Visible    ${notebook_search_locator['menu_level_1']}    timeout=${10s_timeout}
+    IF  ${status} == ${False}
+                        FOR  ${index_retry}  IN RANGE  1    ${retry}+${1}
+                            ${status}    BuiltIn.Run Keyword And Return Status    SeleniumLibrary.Wait Until Element Is Visible    ${notebook_search_locator['menu_level_1']}    timeout=${10s_timeout}
+                            Exit For Loop If    ${status}   
+                        END    
+                    END
     ${menu_total_lv1}    SeleniumLibrary.Get Element Count    ${notebook_search_locator['menu_level_1']} 
     @{list}    BuiltIn.Create List
     &{get_menu}    BuiltIn.Create Dictionary    
@@ -144,7 +150,9 @@ Search notebook and count data
     RETURN    ${get_total}    ${rusult_total_notebook}    ${list} 
     
         
-    
+ Verify side menu
+        Log To Console     Verify side menu
+        
     
         
 

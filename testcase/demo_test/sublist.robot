@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ${CURDIR}/../resources/import.robot
+Resource    ${CURDIR}/../../resources/import.robot
 
 
 *** Test Cases ***
@@ -39,5 +39,4 @@ tc_01
         FOR  ${index_column}  IN RANGE  0  ${total_column}
             Log To Console    ${list}[${index_row}][${index_column}]
         END
-    END
-    # (//ul[@class="search-item-list"]//div[@class="item-detail"])[${index_row}]//li[@class="one-line-ellipsis"][${index_column}]
+    END  
