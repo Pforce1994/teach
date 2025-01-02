@@ -1,0 +1,23 @@
+#timeout
+max_timeout:    300s
+60s_timeout:    60s
+30s_timeout:    30s
+20s_timeout:    20s
+10s_timeout:    10s
+5s_timeout:     5s
+3s_timeout:     3s
+2s_timeout :    2s
+1s_timeout:     1s
+
+#retry
+retry:  3
+
+#round
+round : 0
+
+
+url :  https://notebookspec.com/
+
+collection_file : /Users/pichaya/project_code/teach/resources/postman/collection.json
+env_file : /Users/pichaya/project_code/teach/resources/postman/environment.json
+test_excel : /Users/pichaya/teach/resources/excel_data/test_excel.xlsx

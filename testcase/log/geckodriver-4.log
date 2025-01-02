@@ -1,0 +1,21 @@
+1733917258302	geckodriver	INFO	Listening on 127.0.0.1:49893
+1733917258314	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/Use ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/z8/hw3p2fr57hbgxldmnkzl9bzw0000gn/T/rust_mozprofileYbwtBc"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1733917258581	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1733917258736	Marionette	INFO	Listening on port 49902
+WebDriver BiDi listening on ws://127.0.0.1:49894
+Read port: 49902
+1733917258841	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+2024-12-11 18:40:59.178 firefox[8519:888202] +[IMKClient subclass]: chose IMKClient_Modern
+2024-12-11 18:40:59.178 firefox[8519:888202] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+DevTools listening on ws://127.0.0.1:49894/devtools/browser/3a91a61e-3355-476b-a8d9-1d7e42cfc32a
+JavaScript error: https://notebookspec.com/web/wp-content/plugins/designil-pdpa/public/assets/js/designil-pdpa-public.min.js?ver=2.1.6, line 1: TypeError: pdpa_settings_close is null
+JavaScript error: https://notebookspec.com/web/wp-content/plugins/designil-pdpa/public/assets/js/designil-pdpa-public.min.js?ver=2.1.6, line 1: TypeError: pdpa_settings_close is null
+JavaScript warning: https://pagead2.googlesyndication.com/bg/9YadZKAvDfVs1YHnOGS_YpAGPxas43qCCMtu3GVxRaw.js line 2 > eval line 7493 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/9YadZKAvDfVs1YHnOGS_YpAGPxas43qCCMtu3GVxRaw.js line 2 > eval line 4217 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/9YadZKAvDfVs1YHnOGS_YpAGPxas43qCCMtu3GVxRaw.js line 2 > eval line 5288 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/9YadZKAvDfVs1YHnOGS_YpAGPxas43qCCMtu3GVxRaw.js line 2 > eval line 3465 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1733917291918	Marionette	INFO	Stopped listening on port 49902
